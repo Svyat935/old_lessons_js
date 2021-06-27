@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        function sendMsg() {
+            let xhr = new XMLHttpRequest();
+            let message = document.getElementById("here").value;
+
+            xhr.open('GET', '/answer?message=' + message, false);
+            xhr.send();
+
+            if (xhr.status != 200) {
+                alert( xhr.status + ': ' + xhr.statusText );
+            } else {
+                alert( xhr.responseText );
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <input id="here" type="text">
+    <button onclick="sendMsg()">Click me!</button>
+</body>
+</html>

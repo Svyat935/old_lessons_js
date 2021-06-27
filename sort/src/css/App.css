@@ -1,0 +1,18 @@
+.App{
+
+}
+
+.App-Settings{
+    width: 80%;
+}
+
+.App-SetNumber{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.transition {
+    transition: transform ease-in 0.3s;
+}
